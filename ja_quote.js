@@ -4,8 +4,8 @@
    Case Problem 3
 
    Random Jane Austen Quote Generator
-   Author: 
-   Date:   
+   Author: Ryan Burkhart
+   Date: 2-14-19  
    
    This script randomly generates a Jane Austen quote from
    a list of 10 quotes and writes that quote into the first
@@ -13,6 +13,23 @@
 
 */
 
+var randomQ = randomInt(0, 9);
+
+// Calls the next function ahead of time
+
+function randomInt() {
+    return Math.floor(Math.random() * 10);
+}
+
+// This specifies the values of the numbers
+
+var quoteElem = document.getElementsByTagName('quote');
+
+// genarates the quotes
+
+quoteElem[0].innerHTML = getQuote(randomQ);
+
+// Helps genarate the quotes
 
 function getQuote(n) {
    var quotes = [
